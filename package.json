@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Gowttham S – Full Stack Portfolio (MERN)",
   "scripts": {
-    "client": "npm run dev --prefix client",
-    "server": "npm run dev --prefix server",
-    "dev": "start \"Client\" cmd /k npm run dev --prefix client && start \"Server\" cmd /k npm run dev --prefix server",
-    "install:all": "npm install --prefix client && npm install --prefix server"
+    "frontend": "npm run dev --prefix frontend",
+    "backend": "npm run dev --prefix backend",
+    "dev": "start \"Frontend\" cmd /k npm run dev --prefix frontend && start \"Backend\" cmd /k npm run dev --prefix backend",
+    "install:all": "npm install --prefix frontend && npm install --prefix backend"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
