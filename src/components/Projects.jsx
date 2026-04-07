@@ -32,23 +32,13 @@ export default function Projects() {
     <section className="section section-alt" id="projects">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">ls -la /bin</span>
-          <h2 className="section-title">Compiled Executables</h2>
+          <span className="section-tag">What I've Built</span>
+          <h2 className="section-title">Projects</h2>
         </div>
 
         <div className="projects-grid aos-hidden" style={{ transitionDelay: '100ms' }}>
           {PROJECTS.map(({ id, icon, date, title, desc, bullets, stack, github }) => (
             <div className="project-card" key={id}>
-              <div className="project-card-top" style={{ justifyContent: 'space-between' }}>
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <div className="project-card-dot r"></div>
-                  <div className="project-card-dot y"></div>
-                  <div className="project-card-dot g"></div>
-                </div>
-                <a href={github} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--clr-text-md)', fontSize: '1.05rem', display: 'flex', alignItems: 'center', transition: 'color 0.3s', zIndex: 2 }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--clr-primary)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--clr-text-md)'} aria-label="Source Code" id={`project-${id}-gh`}>
-                  <i className="fa-brands fa-github" />
-                </a>
-              </div>
               <div className="project-icon"><i className={`fa-solid ${icon}`} /></div>
               <div className="project-meta-badge">{date}</div>
               <div className="project-body">
@@ -60,6 +50,11 @@ export default function Projects() {
                 <div className="project-stack">
                   {stack.map((s) => <span className="stack-tag" key={s}>{s}</span>)}
                 </div>
+              </div>
+              <div className="project-links">
+                <a href={github} target="_blank" rel="noopener noreferrer" className="project-link" id={`project-${id}-gh`}>
+                  <i className="fa-brands fa-github" /> GitHub
+                </a>
               </div>
             </div>
           ))}

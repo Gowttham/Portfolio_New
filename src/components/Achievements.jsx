@@ -48,7 +48,7 @@ export default function Achievements() {
     <section className="section section-alt" id="achievements">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">sys.benchmarks</span>
+          <span className="section-tag">Highlights</span>
           <h2 className="section-title">Achievements</h2>
         </div>
 

@@ -36,8 +36,8 @@ export default function Education() {
     <section className="section" id="education">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">git log --all --education</span>
-          <h2 className="section-title">Build History</h2>
+          <span className="section-tag">My Background</span>
+          <h2 className="section-title">Education</h2>
         </div>
 
         <div className="education-grid aos-hidden" style={{ transitionDelay: '100ms' }}>

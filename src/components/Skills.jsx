@@ -39,8 +39,8 @@ export default function Skills() {
     <section className="section section-alt" id="skills">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">sys.modules & dependencies</span>
-          <h2 className="section-title">Tech Stack</h2>
+          <span className="section-tag">What I Know</span>
+          <h2 className="section-title">Technical Skills</h2>
         </div>
 
         <div className="skills-grid aos-hidden" style={{ transitionDelay: '100ms' }}>

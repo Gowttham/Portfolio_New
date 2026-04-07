@@ -47,31 +47,23 @@ export default function Hero() {
       <div className="hero-inner">
         {/* Left */}
         <div className="hero-text hero-entry" style={{ animationDelay: '0.1s' }}>
-          <p className="hero-greeting">Initializing...</p>
+          <p className="hero-greeting">Hello, I'm</p>
           <h1 className="hero-name">Gowttham<span className="accent"> S</span></h1>
           <h2 className="hero-title">
-            <span className="accent">MERN Stack Developer</span> <span className="divider">|</span> CSE (IoT & Cyber Security)
+            MERN Stack Developer <span className="divider">|</span> CSE (IoT &amp; Cyber Security) Student
           </h2>
           <p className="hero-tagline">{tagline}</p>
-          
-          <div className="mern-badges">
-            <span className="mern-badge mern-m" title="MongoDB">MongoDB</span>
-            <span className="mern-badge mern-e" title="Express.js">Express.js</span>
-            <span className="mern-badge mern-r" title="React">React</span>
-            <span className="mern-badge mern-n" title="Node.js">Node.js</span>
-          </div>
-          
-          <div className="hero-btns" style={{ marginTop: '32px' }}>
+          <div className="hero-btns">
             <button className="btn btn-primary" onClick={() => scrollTo('projects')} id="viewProjectsBtn">
-              <i className="fa-solid fa-terminal" /> Execute Projects
+              <i className="fa-solid fa-code" /> View Projects
             </button>
             <button className="btn btn-outline" onClick={() => scrollTo('contact')} id="contactMeBtn">
-              <i className="fa-solid fa-paper-plane" /> Ping Me
+              <i className="fa-solid fa-envelope" /> Contact Me
             </button>
           </div>
           <div className="hero-socials">
             <a href="https://www.linkedin.com/in/gowttham-s/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="heroLinkedIn">
-              <i className="fa-brands fa-linkedin-in" />
+              <i className="fa-brands fa-linkedin" />
             </a>
             <a href="https://github.com/Gowttham" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="heroGitHub">
               <i className="fa-brands fa-github" />
@@ -88,12 +80,6 @@ export default function Hero() {
         {/* Right */}
         <div className="hero-image hero-entry" style={{ animationDelay: '0.3s' }}>
           <div className="profile-ring">
-            <div className="terminal-header">
-              <div className="term-dot r"></div>
-              <div className="term-dot y"></div>
-              <div className="term-dot g"></div>
-              <div className="term-title">dev@gowttham: ~/profile</div>
-            </div>
             <div className="profile-wrap">
               <img
                 src="/Profile.png"
@@ -101,7 +87,7 @@ export default function Hero() {
                 id="profileImg"
                 onError={(e) => {
                   e.target.style.display = 'none'
-                  e.target.parentElement.style.background = 'linear-gradient(135deg,#00d4ff,#00ff88)'
+                  e.target.parentElement.style.background = 'linear-gradient(135deg,#4f46e5,#06b6d4)'
                 }}
               />
             </div>
