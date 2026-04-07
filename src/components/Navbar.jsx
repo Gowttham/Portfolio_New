@@ -78,16 +78,6 @@ export default function Navbar() {
 
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
           <a
-            href="https://github.com/Gowttham/portfolio-mern"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline nav-cv-desktop"
-            style={{ padding: '8px 14px' }}
-            aria-label="Source Code"
-          >
-            <i className="fa-brands fa-github" /> Source
-          </a>
-          <a
             href="/Gowttham_CV.pdf"
             download="Gowttham_S_CV.pdf"
             className="btn btn-cv nav-cv-desktop"
