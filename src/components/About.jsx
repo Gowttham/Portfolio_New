@@ -21,8 +21,8 @@ export default function About() {
     <section className="section" id="about">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">Who I Am</span>
-          <h2 className="section-title">About Me</h2>
+          <span className="section-tag">sys.whoami</span>
+          <h2 className="section-title">Developer Profile</h2>
         </div>
 
         <div className="about-grid aos-hidden" style={{ transitionDelay: '100ms' }}>

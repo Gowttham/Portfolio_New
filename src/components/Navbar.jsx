@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 
 const LINKS = [
-  { label: 'Home',         href: 'home' },
-  { label: 'About',        href: 'about' },
-  { label: 'Skills',       href: 'skills' },
-  { label: 'Internship',   href: 'internship' },
-  { label: 'Projects',     href: 'projects' },
-  { label: 'Education',    href: 'education' },
-  { label: 'Achievements', href: 'achievements' },
-  { label: 'Contact',      href: 'contact' },
+  { label: '~/root',         href: 'home' },
+  { label: '~/whoami',       href: 'about' },
+  { label: '~/tech_stack',   href: 'skills' },
+  { label: '~/logs',         href: 'internship' },
+  { label: '~/binaries',     href: 'projects' },
+  { label: '~/build_deps',   href: 'education' },
+  { label: '~/benchmarks',   href: 'achievements' },
+  { label: '~/ping',         href: 'contact' },
 ]
 
 export default function Navbar() {
@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`} id="navbar">
       <div className="nav-inner">
         <button className="nav-logo" onClick={() => scrollTo('home')} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-          G<span>.</span>
+          G<span>_</span>
         </button>
 
         <button
@@ -71,20 +71,32 @@ export default function Navbar() {
               id="navDownloadCVBtn"
               onClick={() => setOpen(false)}
             >
-              <i className="fa-solid fa-file-arrow-down" /> Download CV
+              <i className="fa-solid fa-download" /> Extract_CV.pdf
             </a>
           </li>
         </ul>
 
-        <a
-          href="/Gowttham_CV.pdf"
-          download="Gowttham_S_CV.pdf"
-          className="btn btn-cv nav-cv-desktop"
-          id="navDownloadCVBtnDesktop"
-          aria-label="Download CV"
-        >
-          <i className="fa-solid fa-file-arrow-down" /> Download CV
-        </a>
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <a
+            href="https://github.com/Gowttham/portfolio-mern"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline nav-cv-desktop"
+            style={{ padding: '8px 14px' }}
+            aria-label="Source Code"
+          >
+            <i className="fa-brands fa-github" /> Source
+          </a>
+          <a
+            href="/Gowttham_CV.pdf"
+            download="Gowttham_S_CV.pdf"
+            className="btn btn-cv nav-cv-desktop"
+            id="navDownloadCVBtnDesktop"
+            aria-label="Download CV"
+          >
+           <i className="fa-solid fa-download" /> Extract_CV.pdf
+          </a>
+        </div>
       </div>
     </nav>
   )

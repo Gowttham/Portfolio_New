@@ -57,8 +57,8 @@ export default function Contact() {
     <section className="section" id="contact">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">Get In Touch</span>
-          <h2 className="section-title">Contact Me</h2>
+          <span className="section-tag">ping 127.0.0.1</span>
+          <h2 className="section-title">Establish Connection</h2>
         </div>
 
         <div className="contact-wrapper aos-hidden" style={{ transitionDelay: '100ms' }}>
@@ -103,43 +103,52 @@ export default function Contact() {
 
           {/* Form */}
           <form ref={formRef} className="contact-form" id="contactForm" onSubmit={handleSubmit} noValidate>
-            <div className="form-group">
-              <label htmlFor="contactName">Your Name</label>
-              <input
-                type="text" id="contactName" name="name"
-                placeholder="John Doe" value={form.name}
-                onChange={handleChange} required
-              />
+            <div className="contact-form-header">
+              <div className="term-dot r"></div>
+              <div className="term-dot y"></div>
+              <div className="term-dot g"></div>
+              <div className="term-title">dev@gowttham: ~/contact_form</div>
             </div>
-            <div className="form-group">
-              <label htmlFor="contactEmailInput">Email Address</label>
-              <input
-                type="email" id="contactEmailInput" name="email"
-                placeholder="john@example.com" value={form.email}
-                onChange={handleChange} required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="contactMessage">Message</label>
-              <textarea
-                id="contactMessage" name="message" rows={5}
-                placeholder="Tell me about your project or opportunity…"
-                value={form.message} onChange={handleChange} required
-              />
-            </div>
+            
+            <div className="contact-form-body">
+              <div className="form-group">
+                <label htmlFor="contactName">Your Name</label>
+                <input
+                  type="text" id="contactName" name="name"
+                  placeholder="John Doe" value={form.name}
+                  onChange={handleChange} required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="contactEmailInput">Email Address</label>
+                <input
+                  type="email" id="contactEmailInput" name="email"
+                  placeholder="john@example.com" value={form.email}
+                  onChange={handleChange} required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="contactMessage">Message</label>
+                <textarea
+                  id="contactMessage" name="message" rows={5}
+                  placeholder="Tell me about your project or opportunity…"
+                  value={form.message} onChange={handleChange} required
+                />
+              </div>
 
-            <button type="submit" className="btn btn-primary btn-full" disabled={loading} id="sendMessageBtn">
-              {loading
-                ? <><i className="fa-solid fa-spinner fa-spin" /> Sending…</>
-                : <><i className="fa-solid fa-paper-plane" /> Send Message</>
-              }
-            </button>
+              <button type="submit" className="btn btn-primary btn-full" disabled={loading} id="sendMessageBtn">
+                {loading
+                  ? <><i className="fa-solid fa-spinner fa-spin" /> Sending…</>
+                  : <><i className="fa-solid fa-paper-plane" /> Send Message</>
+                }
+              </button>
 
-            {status.msg && (
-              <p className={status.type === 'ok' ? 'form-status-ok' : 'form-status-err'} id="formStatus">
-                {status.type === 'ok' ? '✓ ' : ''}{status.msg}
-              </p>
-            )}
+              {status.msg && (
+                <p className={status.type === 'ok' ? 'form-status-ok' : 'form-status-err'} id="formStatus">
+                  {status.type === 'ok' ? '✓ ' : ''}{status.msg}
+                </p>
+              )}
+            </div>
           </form>
         </div>
       </div>

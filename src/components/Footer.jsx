@@ -4,10 +4,13 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <p className="footer-copy">&copy; {new Date().getFullYear()} <strong>Gowttham S</strong>. All rights reserved.</p>
+        <div className="footer-brand">
+          dev@Gowttham<span>.</span>
+        </div>
+        <p className="footer-copy">&copy; {new Date().getFullYear()} <strong>Gowttham S</strong> <span className="clr-green">| All rights reserved.</span></p>
         <div className="footer-socials">
           <a href="https://www.linkedin.com/in/gowttham-s/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="footerLinkedIn">
-            <i className="fa-brands fa-linkedin" />
+            <i className="fa-brands fa-linkedin-in" />
           </a>
           <a href="https://github.com/Gowttham" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="footerGitHub">
             <i className="fa-brands fa-github" />
@@ -23,8 +26,8 @@ export default function Footer() {
           </a>
         </div>
         <p className="footer-back">
-          <button onClick={scrollTop} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit' }} id="backToTopLink">
-            Back to top <i className="fa-solid fa-arrow-up" />
+          <button onClick={scrollTop} id="backToTopLink">
+            Back to Top <i className="fa-solid fa-arrow-up" />
           </button>
         </p>
       </div>

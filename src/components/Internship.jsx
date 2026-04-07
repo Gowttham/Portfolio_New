@@ -43,8 +43,8 @@ export default function Internship() {
     <section className="section" id="internship">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">Experience</span>
-          <h2 className="section-title">Internship</h2>
+          <span className="section-tag">tail -f /var/log/experience</span>
+          <h2 className="section-title">Industry Instances</h2>
         </div>
 
         <div className="timeline aos-hidden" style={{ transitionDelay: '100ms' }}>

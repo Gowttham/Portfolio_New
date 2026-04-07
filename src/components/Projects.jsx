@@ -32,13 +32,18 @@ export default function Projects() {
     <section className="section section-alt" id="projects">
       <div className="container">
         <div className="section-header aos-hidden">
-          <span className="section-tag">What I've Built</span>
-          <h2 className="section-title">Projects</h2>
+          <span className="section-tag">ls -la /bin</span>
+          <h2 className="section-title">Compiled Executables</h2>
         </div>
 
         <div className="projects-grid aos-hidden" style={{ transitionDelay: '100ms' }}>
           {PROJECTS.map(({ id, icon, date, title, desc, bullets, stack, github }) => (
             <div className="project-card" key={id}>
+              <div className="project-card-top">
+                <div className="project-card-dot r"></div>
+                <div className="project-card-dot y"></div>
+                <div className="project-card-dot g"></div>
+              </div>
               <div className="project-icon"><i className={`fa-solid ${icon}`} /></div>
               <div className="project-meta-badge">{date}</div>
               <div className="project-body">
@@ -53,7 +58,7 @@ export default function Projects() {
               </div>
               <div className="project-links">
                 <a href={github} target="_blank" rel="noopener noreferrer" className="project-link" id={`project-${id}-gh`}>
-                  <i className="fa-brands fa-github" /> GitHub
+                  <i className="fa-brands fa-github" /> Source_Code
                 </a>
               </div>
             </div>
